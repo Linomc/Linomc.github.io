@@ -13,7 +13,7 @@
 
 <meta name="date" content="2023-10-18" />
 
-<title>Minicurso_sia</title>
+<title>Minicurso_sia_2023_Unirio</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -350,7 +350,7 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Minicurso_sia</h1>
+<h1 class="title toc-ignore">Minicurso_sia_2023_Unirio</h1>
 <h4 class="author">Lino Carvalho</h4>
 <h4 class="date">2023-10-18</h4>
 
@@ -378,23 +378,7 @@ str(Turma_estudantes)</code></pre>
 ##  $ Ingles   : chr [1:20] &quot;Avançado&quot; &quot;Basico&quot; &quot;Basico&quot; &quot;Intermediario&quot; ...
 ##  $ Bairro   : chr [1:20] &quot;A&quot; &quot;E&quot; &quot;D&quot; &quot;C&quot; ...
 ##  $ Nº Irmãos: num [1:20] 2 1 3 2 2 1 3 2 1 3 ...</code></pre>
-<div id="o-que-são-essas-informações-de-saída-do-nosso-código-obs.-vou-repetir-1-para-informar-as-saídas." class="section level4">
-<h4>O que são essas informações de saída do nosso código? obs. vou
-repetir [1] para informar as saídas.</h4>
-<ul>
-<li>[1] 20 total de <strong>linhas</strong> do conjunto de dados, são as
-observações, objeto dos cursos de estatística</li>
-<li>[1] 8 total de <strong>colunas</strong> do conjunto de dados, são as
-variáveis ou atributos, objeto dos cursos de estatística.</li>
-</ul>
 <hr />
-<p>OBS. Imaginem, você sendo responsável por informar coisas sobre a
-turma a partir desse conjunto de dados <strong>Turma_estudantes</strong>
-será que é possível informar algo ou prof. dessa turma que seja
-relevante para que o resultados dos alunos que estão no nível básico e
-intermediário avancem para o nível avançado? Acho que primeiro é
-necessário conhecer um pouco desses dados, não acham?</p>
-</div>
 </div>
 </div>
 <div id="estatísticas-descritivas-univariadas" class="section level1">
@@ -817,7 +801,10 @@ anova_Idade_Ingles</code></pre>
 ## 
 ## Residual standard error: 3.799418
 ## Estimated effects may be unbalanced</code></pre>
-<p>se não normal: teste de kruskal wallis (kruskal.test())</p>
+<p>seguindo o teste de shapiro, p-value = 0.003119, logo p &lt; 0.05,
+então é não normal, então o teste mais indicado é o de Kruskal
+Wallis:</p>
+<p>teste de kruskal wallis (kruskal.test())</p>
 <pre class="r"><code>kruskal.test(Idade~Ingles, data = Turma_estudantes)</code></pre>
 <pre><code>## 
 ##  Kruskal-Wallis rank sum test
@@ -829,6 +816,9 @@ anova_Idade_Ingles</code></pre>
 <h5>Conclusão o teste não rejeita <span class="math inline">\(H_0\)</span>, já que p &gt; 0.05.</h5>
 </div>
 </div>
+</div>
+<div id="muito-obrigado" class="section level2">
+<h2># Muito OBRIGADO!</h2>
 </div>
 </div>
 
